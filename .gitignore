@@ -1,0 +1,66 @@
+# Compiled class files
+target/
+bin/
+
+# Maven-specific files
+pom.xml.tag
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/wrapper/maven-wrapper.jar # Maven Wrapper JAR
+
+# Gradle-specific files (if using Gradle)
+.gradle/
+build/
+out/
+
+# IDE-specific files
+.idea/
+.classpath
+.project
+.settings/
+.vscode/
+*.iml
+*.ipr
+*.iws
+nbproject/
+.DS_Store # macOS specific
+Thumbs.db # Windows specific
+
+# Log files
+*.log
+logs/
+
+# Database files
+*.mv.db # H2 database file (if using H2)
+*.trace.db # H2 database trace file
+
+# Configuration files (sensitive or local)
+application*.properties.bak
+application*.yml.bak
+*.env
+.env
+src/main/resources/*.properties.bak
+src/main/resources/*.yml.bak
+src/main/resources/application-local.properties # Example for local-only configuration
+src/main/resources/application-dev.properties # Example for environment-specific configuration
+src/main/resources/application-prod.properties
+src/main/resources/application-test.properties
+
+# Spring Boot specific
+*.jar
+*.war
+*.zip
+!*.jar!/BOOT-INF/lib/
+!*.war!/WEB-INF/lib/
+
+# Test reports and coverage
+target/surefire-reports/
+target/jacoco/
+target/site/jacoco/
+
+# Other temporary files
+tmp/
+temp/
