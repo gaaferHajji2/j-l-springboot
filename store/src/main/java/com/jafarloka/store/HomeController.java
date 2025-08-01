@@ -21,4 +21,15 @@ public class HomeController {
         return "index.html";
     }
 
+    @RequestMapping("/order")
+    public String order(){
+        OrderService orderService = new OrderService(new StripePaymentService());
+        orderService.placeOrder();
+
+        orderService = new OrderService(new PaypalPaymentService());
+        orderService.placeOrder();
+
+        return "order.html";
+    }
+
 }

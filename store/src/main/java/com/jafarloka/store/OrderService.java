@@ -2,9 +2,13 @@ package com.jafarloka.store;
 
 public class OrderService {
 
-    public void placeOrder() {
-        var paymentService = new StripePaymentService();
+    private PaymentService paymentService;
 
+    public OrderService(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
+
+    public void placeOrder() {
         paymentService.processPayment(100_000);
     }
 
