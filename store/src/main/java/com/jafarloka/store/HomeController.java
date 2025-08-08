@@ -29,6 +29,12 @@ public class HomeController {
         orderService = new OrderService(new PaypalPaymentService());
         orderService.placeOrder();
 
+        orderService.setPaymentService(new StripePaymentService());
+        orderService.placeOrder();
+
+        orderService.setPaymentService(new PaypalPaymentService());
+        orderService.placeOrder();
+
         return "order.html";
     }
 
