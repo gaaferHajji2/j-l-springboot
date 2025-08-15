@@ -12,6 +12,10 @@ public class StoreApplication {
 
 		OrderService orderService = context.getBean(OrderService.class);
 		orderService.placeOrder();
+
+		var notificationManager = context.getBean(com.jafarloka.store.NotificationManager.class);
+
+		notificationManager.sendNotification("Hi, My Name ==> Jafar Loka");
 	}
 
 }
