@@ -1,6 +1,7 @@
 package com.jafarloka.store;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,7 +12,7 @@ public class OrderService {
     public OrderService() {}
 
     @Autowired
-    public OrderService(PaymentService paymentService) {
+    public OrderService(@Qualifier("paypal") PaymentService paymentService) {
         this.paymentService = paymentService;
     }
 
