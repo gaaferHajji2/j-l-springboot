@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.jafarloka.store.NotificationManager;
+
 @SpringBootApplication
 public class StoreApplication {
 
@@ -13,7 +15,7 @@ public class StoreApplication {
 		OrderService orderService = context.getBean(OrderService.class);
 		orderService.placeOrder();
 
-		var notificationManager = context.getBean(com.jafarloka.store.NotificationManager.class);
+		var notificationManager = context.getBean(NotificationManager.class);
 
 		notificationManager.sendNotification("Hi, My Name ==> Jafar Loka");
 	}
