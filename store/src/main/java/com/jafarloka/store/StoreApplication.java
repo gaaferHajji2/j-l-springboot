@@ -5,17 +5,20 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.jafarloka.store.NotificationManager;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class StoreApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(StoreApplication.class, args);
 
 //		var resource = context.getBean(HeavyResource.class);
 
-//		OrderService orderService = context.getBean(OrderService.class);
-//		orderService.placeOrder();
+		 OrderService orderService = context.getBean(OrderService.class);
+		// orderService.placeOrder();
+
+		context.close();
 //
 //		var notificationManager = context.getBean(NotificationManager.class);
 //
