@@ -30,4 +30,19 @@ public class AppConfig {
         return new OrderService(stripe());
     }
 
+    @Bean
+    public NotificationService email() {
+        return new EmailNotificationService();
+    }
+
+    @Bean
+    public UserRepository inmemory() {
+        return new InMemoryUserRepository();
+    }
+
+    @Bean
+    public UserService userService() {
+        return new UserService(inmemory(), email());
+    }
+
 }

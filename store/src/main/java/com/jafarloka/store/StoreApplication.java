@@ -15,8 +15,13 @@ public class StoreApplication {
 
 //		var resource = context.getBean(HeavyResource.class);
 
-		 OrderService orderService = context.getBean(OrderService.class);
+		// OrderService orderService = context.getBean(OrderService.class);
 		// orderService.placeOrder();
+
+		var userService = context.getBean(UserService.class);
+
+		userService.registerUser(new User(1L, "Jafar Loka", "gaafer@loka.com", "Test@123"));
+		userService.registerUser(new User(1L, "Jafar Loka", "gaafer@loka.com", "Test@123"));
 
 		context.close();
 //

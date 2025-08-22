@@ -10,3 +10,7 @@ stripe:
     - EUR
     - GBP
 payment-gateway: strip
+
+mail:
+  host: https://jloka.smtp.com
+  port: 12345
