@@ -9,3 +9,4 @@ stripe:
     - USD
     - EUR
     - GBP
+payment-gateway: strip
