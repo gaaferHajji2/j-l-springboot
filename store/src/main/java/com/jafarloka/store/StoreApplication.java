@@ -18,12 +18,12 @@ public class StoreApplication {
 		// OrderService orderService = context.getBean(OrderService.class);
 		// orderService.placeOrder();
 
-		var userService = context.getBean(UserService.class);
-
-		userService.registerUser(new User(1L, "Jafar Loka", "gaafer@loka.com", "Test@123"));
-		userService.registerUser(new User(1L, "Jafar Loka", "gaafer@loka.com", "Test@123"));
-
-		context.close();
+//		var userService = context.getBean(UserService.class);
+//
+//		userService.registerUser(new User(1L, "Jafar Loka", "gaafer@loka.com", "Test@123"));
+//		userService.registerUser(new User(1L, "Jafar Loka", "gaafer@loka.com", "Test@123"));
+//
+//		context.close();
 //
 //		var notificationManager = context.getBean(NotificationManager.class);
 //
