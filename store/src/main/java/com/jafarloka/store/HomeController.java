@@ -9,41 +9,41 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    @Value("${spring.application.name}")
-    private String appName;
-
-    @Value("${jloka.value}")
-    private String value;
-
-    @Value("${stripe.apiUrl}")
-    private String stripeApiUrl;
-
-    @Value("${stripe.enabled}")
-    private boolean enabled;
-
-    @Value("${stripe.timeout}")
-    private int timeout;
-
-    @Value("${stripe.supported-currencies}")
-    private List<String> supportedCurrencies;
-
-    @Value("${not.defined:Hi}")
-    private String notDefined;
+//    @Value("${spring.application.name}")
+//    private String appName;
+//
+//    @Value("${jloka.value}")
+//    private String value;
+//
+//    @Value("${stripe.apiUrl}")
+//    private String stripeApiUrl;
+//
+//    @Value("${stripe.enabled}")
+//    private boolean enabled;
+//
+//    @Value("${stripe.timeout}")
+//    private int timeout;
+//
+//    @Value("${stripe.supported-currencies}")
+//    private List<String> supportedCurrencies;
+//
+//    @Value("${not.defined:Hi}")
+//    private String notDefined;
 
     @RequestMapping("/")
     public String index() {
 
-        System.out.println("The app name is: " + appName + ", The value is: " + value);
-
-        System.out.println("Url is: " + stripeApiUrl);
-
-        System.out.println("Enabled is: " + enabled);
-
-        System.out.println("Timeout is: " + timeout);
-
-        System.out.println("Supported Currencies is: " + supportedCurrencies);
-
-        System.out.println("Not defined is: " + notDefined);
+//        System.out.println("The app name is: " + appName + ", The value is: " + value);
+//
+//        System.out.println("Url is: " + stripeApiUrl);
+//
+//        System.out.println("Enabled is: " + enabled);
+//
+//        System.out.println("Timeout is: " + timeout);
+//
+//        System.out.println("Supported Currencies is: " + supportedCurrencies);
+//
+//        System.out.println("Not defined is: " + notDefined);
 
         return "index.html";
     }

@@ -14,16 +14,6 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MariaDBDialect
 
-stripe:
-  apiUrl: https://api.stripe.com
-  enabled: true
-  timeout: 3000
-  supported-currencies:
-    - USD
-    - EUR
-    - GBP
-payment-gateway: strip
-
 mail:
-  host: https://jloka.smtp.com
-  port: 12345
+  host: JLoka
+  port: 3000
