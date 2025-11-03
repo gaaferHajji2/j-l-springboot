@@ -1,15 +1,13 @@
 package com.jafarloka.store.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor // we define it because jpa expected no args constructor
+@Builder
 @Entity
 @Table(name = "users")
 public class User {
