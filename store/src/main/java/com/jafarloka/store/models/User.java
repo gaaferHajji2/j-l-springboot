@@ -26,4 +26,9 @@ public class User {
     private String password;
     @OneToMany(mappedBy = "user") // this is the field in address-entity
     private List<Address> addresses = new ArrayList<>();
+
+    public void addAddress(Address address) {
+        addresses.add(address);
+        address.setUser(this);
+    }
 }
