@@ -25,5 +25,7 @@ public class Address {
     private String zip;
     @Column(nullable = false, name = "state")
     private String state;
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 }
