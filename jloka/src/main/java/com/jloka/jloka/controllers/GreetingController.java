@@ -1,14 +1,10 @@
 package com.jloka.jloka.controllers;
 
 import java.util.concurrent.atomic.AtomicLong;
-
 import org.springframework.web.bind.annotation.RestController;
-
 import com.jloka.jloka.resources.Greeting;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 
 @RestController
 public class GreetingController {
@@ -19,5 +15,4 @@ public class GreetingController {
     public Greeting greeting(@RequestParam(defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(), template.formatted(name));
     }
-    
 }
