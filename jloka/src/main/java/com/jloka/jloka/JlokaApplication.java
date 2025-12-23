@@ -14,13 +14,7 @@ import com.jloka.jloka.repositories.CustomerRepository;
 @SpringBootApplication
 public class JlokaApplication {
 
-    private final CustomerRepository customerRepository;
-
 	private static final Logger logger = LoggerFactory.getLogger(JlokaApplication.class);
-
-    JlokaApplication(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
-    }
 
 	public static void main(String[] args) {
 		SpringApplication.run(JlokaApplication.class, args);
@@ -30,11 +24,11 @@ public class JlokaApplication {
 	public CommandLineRunner demo(CustomerRepository customerRepository) {
 		return (args) -> {
 			// save customers
-			customerRepository.save(new Customer("JLoka-01", "JLoka-01"));
-			customerRepository.save(new Customer("JLoka-01", "JLoka-01"));
-			customerRepository.save(new Customer("JLoka-01", "JLoka-01"));
-			customerRepository.save(new Customer("JLoka-01", "JLoka-02"));
-			customerRepository.save(new Customer("JLoka-01", "JLoka-03"));
+			// customerRepository.save(new Customer("JLoka-01", "JLoka-01"));
+			// customerRepository.save(new Customer("JLoka-01", "JLoka-01"));
+			// customerRepository.save(new Customer("JLoka-01", "JLoka-01"));
+			// customerRepository.save(new Customer("JLoka-01", "JLoka-02"));
+			// customerRepository.save(new Customer("JLoka-01", "JLoka-03"));
 
 			// fetch all customers
 			logger.info("==================================");
