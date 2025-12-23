@@ -13,11 +13,13 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name= "id", nullable = false)
+    @Column(name= "first_name", nullable = false)
     private String firstName;
 
-    @Column(name="firstName", nullable=false)
+    @Column(name="last_name", nullable=false)
     private String lastName;
+
+    protected Customer() {}
 
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
