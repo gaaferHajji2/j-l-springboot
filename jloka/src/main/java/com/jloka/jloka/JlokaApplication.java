@@ -32,7 +32,7 @@ public class JlokaApplication {
 
 			// fetch all customers
 			logger.info("==================================");
-			logger.info("Getting al; customer data");
+			logger.info("Getting all customer data");
 			customerRepository.findAll().forEach(customer -> {
 				logger.info(customer.toString());
 			});
