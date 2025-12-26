@@ -10,10 +10,8 @@ import org.springframework.context.annotation.Bean;
 import com.jloka.jloka.models.Customer;
 import com.jloka.jloka.repositories.CustomerRepository;
 
-
 @SpringBootApplication
 public class JlokaApplication {
-
 	private static final Logger logger = LoggerFactory.getLogger(JlokaApplication.class);
 
 	public static void main(String[] args) {
