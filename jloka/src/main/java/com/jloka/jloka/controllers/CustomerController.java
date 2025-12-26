@@ -29,5 +29,4 @@ public class CustomerController {
     public @ResponseBody Iterable<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }
-
 }
