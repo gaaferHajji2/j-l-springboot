@@ -79,7 +79,7 @@
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
 				<configuration>
-					<url>jdbc:mariadb://localhost:3306/jloka_test_01?createDatabaseIfNotExist=true</url>
+					<url>jdbc:mariadb://localhost:3306/jloka_test_02?createDatabaseIfNotExist=true</url>
 					<user>root</user>
 					<password>123</password>
 					<cleanDisabled>false</cleanDisabled>
