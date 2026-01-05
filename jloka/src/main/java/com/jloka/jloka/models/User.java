@@ -13,21 +13,16 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
     @Column(nullable = false, unique = true)
     private String username;
-    
     @Column(nullable = false)
     private String email;
-    
     // One-to-One relationship with UserProfile
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private UserProfile profile;
-    
     // One-to-Many relationship with Post
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Post> posts = new ArrayList<>();
-    
     // Many-to-Many relationship with Role
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
@@ -36,7 +31,6 @@ public class User {
         inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles = new HashSet<>();
-    
     // Constructors
     public User() {}
     
