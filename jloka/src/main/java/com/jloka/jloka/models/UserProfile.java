@@ -1,13 +1,11 @@
 package com.jloka.jloka.models;
 
 import java.time.LocalDate;
-
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "user_profiles")
 public class UserProfile {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
