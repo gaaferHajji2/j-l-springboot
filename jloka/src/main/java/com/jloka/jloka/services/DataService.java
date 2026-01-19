@@ -35,22 +35,17 @@ public class DataService {
         Role editorRole = roleRepository.findByName("EDITOR");
         newUser.addRole(userRole);
         newUser.addRole(editorRole);
-        
         userRepository.save(newUser);
-        
         // Create a new post (One-to-Many)
         Post newPost = new Post("New Spring Boot Feature", "Exciting new features in Spring Boot 3.2...", newUser);
-        
         // Add tags (Many-to-Many)
         Tag springTag = tagRepository.findByName("Spring Boot");
         Tag javaTag   = tagRepository.findByName("Java");
         newPost.addTag(springTag);
         newPost.addTag(javaTag);
-        
         // Add a comment
         Comment comment = new Comment("Looking forward to trying this!", newPost, newUser);
         newPost.addComment(comment);
-        
         postRepository.save(newPost);
     }
     
