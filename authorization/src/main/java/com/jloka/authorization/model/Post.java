@@ -1,11 +1,12 @@
 package com.jloka.authorization.model;
 
 import java.time.LocalDateTime;
-
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "posts")
+@Data
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

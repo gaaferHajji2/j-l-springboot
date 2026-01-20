@@ -2,9 +2,11 @@ package com.jloka.authorization.model;
 
 import java.util.List;
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "users")
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
