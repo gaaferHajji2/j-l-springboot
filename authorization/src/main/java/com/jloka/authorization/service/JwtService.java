@@ -14,7 +14,7 @@ import javax.crypto.spec.SecretKeySpec;
 @Service
 public class JwtService {
     
-    private static final String SECRET_KEY = "mySecretKeyWhichIsVeryLongAndSecure1234567890";
+    private static final String SECRET_KEY = "LAuhPU+mYG4fVbAMlw11LILq/FYDo6QmqiQf1N+XuYE=";
     private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 24; // 10 hours
     
     private SecretKeySpec getSigningKey() {
