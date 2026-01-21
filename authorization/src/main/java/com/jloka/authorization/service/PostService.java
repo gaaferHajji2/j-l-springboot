@@ -3,12 +3,11 @@ package com.jloka.authorization.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
-
 import com.jloka.authorization.dto.PostDTO;
 import com.jloka.authorization.model.Post;
 import com.jloka.authorization.repository.PostRepository;
-
 import java.util.Optional;
 
 @Service
@@ -45,7 +44,7 @@ public class PostService {
         ));
     }
     
-    public Post createPost(Post post) {
+    public Post createPost(@NonNull Post post) {
         return postRepository.save(post);
     }
 }
