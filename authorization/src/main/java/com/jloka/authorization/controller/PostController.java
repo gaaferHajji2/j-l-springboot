@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jloka.authorization.dto.PostDTO;
+import com.jloka.authorization.dto.PostResponseDTO;
 import com.jloka.authorization.model.Post;
 import com.jloka.authorization.service.PostService;
 
@@ -53,8 +54,12 @@ public class PostController {
     }
     
     @PostMapping
-    public ResponseEntity<Post> createPost(@NonNull @RequestBody Post post) {
+    public ResponseEntity<PostResponseDTO> createPost(@NonNull @RequestBody Post post) {
         Post savedPost = postService.createPost(post);
-        return ResponseEntity.ok(savedPost);
+        PostResponseDTO t1 = new PostResponseDTO(
+            savedPost.getId(), savedPost.getTitle(), savedPost.getContent(),
+            savedPost.getUser().getId()
+        );
+        return ResponseEntity.ok(t1);
     }
 }
