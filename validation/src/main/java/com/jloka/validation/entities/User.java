@@ -1,7 +1,6 @@
 package com.jloka.validation.entities;
 
 import org.hibernate.validator.constraints.URL;
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 

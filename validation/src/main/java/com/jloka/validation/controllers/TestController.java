@@ -15,12 +15,12 @@ import com.jloka.validation.entities.*;
 public class TestController {
     
     @PostMapping("/create-user")
-    public ResponseEntity<User> postMethodName(@Valid @RequestBody User user) {
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
         return ResponseEntity.ok(user);
     }
 
     @PostMapping("/create-profile")
-    public ResponseEntity<Profile> postMethodName(@Valid @RequestBody Profile profile) {        
+    public ResponseEntity<Profile> createProfile(@Valid @RequestBody Profile profile) {        
         return ResponseEntity.ok(profile);
     }
 }
