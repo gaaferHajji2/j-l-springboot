@@ -2,15 +2,15 @@ package com.jloka.validation.entities;
 
 import jakarta.annotation.Nullable;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 public class Profile {
     @NotNull(message = "User can't be null")
     @Valid
     private User user;
 
-    @Min(1)
+    @Size(min = 1, max= 5000)
     @Nullable
     private String bio;
 
