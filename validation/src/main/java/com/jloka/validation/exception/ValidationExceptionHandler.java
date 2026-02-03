@@ -1,4 +1,4 @@
-package com.jloka.validation.handlers;
+package com.jloka.validation.exception;
 
 import java.util.HashMap;
 import java.util.Map;
