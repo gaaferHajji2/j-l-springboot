@@ -1,4 +1,4 @@
-package com.jloka.validation.entities;
+package com.jloka.validation.models;
 
 import org.hibernate.validator.constraints.URL;
 import jakarta.validation.constraints.Email;

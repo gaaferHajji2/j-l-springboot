@@ -1,4 +1,4 @@
-package com.jloka.validation.entities;
+package com.jloka.validation.models;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

@@ -1,4 +1,4 @@
-package com.jloka.validation.entities;
+package com.jloka.validation.models;
 
 import jakarta.annotation.Nullable;
 import jakarta.validation.Valid;
