@@ -56,13 +56,13 @@ public class GlobalExceptionHandler {
         
         // Build nested path for nested objects
         List<FieldError> fieldErrors = ex.getBindingResult().getFieldErrors();
-        Map<String, List<String>> nestedErrors = fieldErrors.stream()
-            .collect(Collectors.groupingBy(
-                FieldError::getField,
-                Collectors.mapping(FieldError::getDefaultMessage, Collectors.toList())
-            ));
+        // Map<String, List<String>> nestedErrors = fieldErrors.stream()
+        //     .collect(Collectors.groupingBy(
+        //         FieldError::getField,
+        //         Collectors.mapping(FieldError::getDefaultMessage, Collectors.toList())
+        //     ));
 
-        System.out.println("The HashMap Of nested Errors: " + nestedErrors);
+        // System.out.println("The HashMap Of nested Errors: " + nestedErrors);
         
         ValidationErrorResponse response = ValidationErrorResponse.builder()
             .timestamp(LocalDateTime.now())
