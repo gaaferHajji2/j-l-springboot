@@ -17,7 +17,6 @@ import lombok.Data;
 
 @Data
 public class CompanyRegistrationRequest {
-    
     @NotBlank(message = "Company name is required")
     @Size(min = 2, max = 100, message = "Company name must be between 2 and 100 characters")
     private String companyName;

@@ -1,7 +1,6 @@
 package com.jloka.validation.models;
 
 import java.util.List;
-
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -10,7 +9,6 @@ import lombok.Data;
 
 @Data
 public class Department {
-    
     @NotBlank(message = "Department name is required")
     private String name;
     

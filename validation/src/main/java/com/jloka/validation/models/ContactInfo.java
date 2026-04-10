@@ -7,7 +7,6 @@ import lombok.Data;
 
 @Data
 public class ContactInfo {
-    
     @NotBlank(message = "Email is required")
     @Email(message = "Email must be valid")
     private String email;

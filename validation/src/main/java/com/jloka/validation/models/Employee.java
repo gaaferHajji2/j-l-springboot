@@ -10,7 +10,6 @@ import lombok.Data;
 
 @Data
 public class Employee {
-    
     @NotBlank(message = "Employee name is required")
     private String name;
     

@@ -7,7 +7,6 @@ import lombok.Data;
 
 @Data
 public class Address {
-    
     @NotBlank(message = "Street is required")
     @Size(min = 5, max = 100, message = "Street must be between 5 and 100 characters")
     private String street;
