@@ -15,7 +15,7 @@ import javax.crypto.spec.SecretKeySpec;
 public class JwtService {
     
     private static final String SECRET_KEY = "LAuhPU+mYG4fVbAMlw11LILq/FYDo6QmqiQf1N+XuYE=";
-    private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 24; // 10 hours
+    private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 24;
     
     private SecretKeySpec getSigningKey() {
         byte[] bytes = Base64.getDecoder().decode(SECRET_KEY.getBytes(StandardCharsets.UTF_8));

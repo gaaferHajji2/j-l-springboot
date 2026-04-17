@@ -41,6 +41,8 @@ public class PostService {
         // Using JOIN FETCH to eagerly load user relation only when accessing by ID
         Optional<Post> post = postRepository.findByIdWithUser(id);
 
+        // Here we must check if post == null
+
         return post.map(p -> new PostDTO(
                 p.getId(),
                 p.getTitle(),
