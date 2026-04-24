@@ -30,18 +30,10 @@ public class SecurityConfig {
     }
     
     @Bean
-    public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
-        System.out.println("Getting the authentication manager");
-        
+    public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {        
         AuthenticationManagerBuilder authManagerBuilder =  http.getSharedObject(AuthenticationManagerBuilder.class);
         authManagerBuilder.userDetailsService(userService).passwordEncoder(passwordEncoder());
         return authManagerBuilder.build();  
-
-    //     return http.getSharedObject(AuthenticationManagerBuilder.class)
-    //             .userDetailsService(userService)
-    //             .passwordEncoder(passwordEncoder())
-    //             .and()
-    //             .build();
     }
     
     @Bean
@@ -54,7 +46,6 @@ public class SecurityConfig {
             );
         
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-        
         return http.build();
     }
 }
