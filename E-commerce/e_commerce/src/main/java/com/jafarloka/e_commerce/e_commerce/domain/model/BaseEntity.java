@@ -9,7 +9,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import jakarta.persistence.MappedSuperclass;;
 
 @MappedSuperclass
-public class BaseEntity {
+public abstract class BaseEntity {
     @Id
     private String id;
 
