@@ -18,7 +18,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @Builder
-public class User {
+public class User extends BaseEntity {
     @NotBlank(message = "Username is required")
     @Size(min = 3, max = 50)
     private String username;
