@@ -2,6 +2,7 @@ package com.jafarloka.e_commerce.e_commerce.domain.model;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.ArrayList;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
