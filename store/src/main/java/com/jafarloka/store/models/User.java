@@ -2,7 +2,6 @@ package com.jafarloka.store.models;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class User {
     @Column(nullable = false, name = "password")
     private String password;
     @OneToMany(mappedBy = "user") // this is the field in address-entity
-    private List<Address> addresses = new ArrayList<>();
+    private final List<Address> addresses = new ArrayList<>();
 
     public void addAddress(Address address) {
         addresses.add(address);
