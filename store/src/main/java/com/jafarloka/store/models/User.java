@@ -41,6 +41,30 @@ public class User {
     @OneToOne(mappedBy = "user")
     private Profile profile;
 
+    /**
+     * The owning side of the relationship.
+     * Defines the join table 'wishlist' with foreign keys to users and products.
+     */
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+        name = "wishlist",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "product_id")
+    )
+    @Builder.Default
+    private Set<Product> products = new HashSet<>();
+
+    // Helper methods to maintain bidirectional consistency (if needed)
+    public void addToWishlist(Product product) {
+        this.products.add(product);
+        product.getUsers().add(this);
+    }
+
+    public void removeFromWishlist(Product product) {
+        this.products.remove(product);
+        product.getUsers().remove(this);
+    }
+
     public void addAddress(Address address) {
         addresses.add(address);
         address.setUser(this);
