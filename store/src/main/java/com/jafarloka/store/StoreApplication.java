@@ -1,6 +1,7 @@
 package com.jafarloka.store;
 
 import com.jafarloka.store.models.Address;
+import com.jafarloka.store.models.Tag;
 import com.jafarloka.store.models.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,11 +15,12 @@ public class StoreApplication {
 		user.setName("Jafar Loka");
 		user.setPassword("Test@123");
 
-		var addr1 = Address.builder().zip("test@123").state("test@123").street("test@123").build();
-		var addr2 = Address.builder().zip("test@123").state("test@123").street("test@123").build();
+		Tag tag1 = new Tag("JLoka-01");
+		Tag tag2 = new Tag("JLoka-02");
 
-		user.addAddress(addr1);
-		user.addAddress(addr2);
+		user.addTag(tag1);
+		user.addTag(tag2);
+		
 		System.out.println("The user is: " + user);
 	}
 }
