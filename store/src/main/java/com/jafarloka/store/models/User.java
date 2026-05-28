@@ -10,6 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor // we define it because jpa expected no args constructor
 @Builder
+@ToString
 @Entity
 @Table(name = "users")
 public class User {
@@ -24,7 +25,9 @@ public class User {
     @Column(nullable = false, name = "password")
     private String password;
     @OneToMany(mappedBy = "user") // this is the field in address-entity
-    private final List<Address> addresses = new ArrayList<>();
+    @Builder.Default
+    // private final List<Address> addresses = new ArrayList<>();
+    private List<Address> addresses = new ArrayList<>();
 
     public void addAddress(Address address) {
         addresses.add(address);
