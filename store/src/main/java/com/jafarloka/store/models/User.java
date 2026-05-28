@@ -36,6 +36,7 @@ public class User {
         joinColumns = @JoinColumn(name= "user_id"),
         inverseJoinColumns = @JoinColumn(name = "tag_id")
     )
+    @Builder.Default
     private Set<Tag> tags = new HashSet<>();
 
     public void addAddress(Address address) {
