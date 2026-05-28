@@ -19,5 +19,6 @@ public class StoreApplication {
 
 		user.addAddress(addr1);
 		user.addAddress(addr2);
+		System.out.println("The user is: " + user);
 	}
 }
