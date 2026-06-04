@@ -16,6 +16,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Wishlist {
+
+    @EmbeddedId
+    private WishlistId id;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("userId") // Maps to the userId field in the composite key
     @JoinColumn(name = "user_id", nullable = false)
