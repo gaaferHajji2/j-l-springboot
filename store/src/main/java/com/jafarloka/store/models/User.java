@@ -57,12 +57,12 @@ public class User {
     // Helper methods to maintain bidirectional consistency (if needed)
     public void addToWishlist(Product product) {
         this.products.add(product);
-        product.getUsers().add(this);
+        // product.getUsers().add(this);
     }
 
     public void removeFromWishlist(Product product) {
         this.products.remove(product);
-        product.getUsers().remove(this);
+        // product.getUsers().remove(this);
     }
 
     public void addAddress(Address address) {
