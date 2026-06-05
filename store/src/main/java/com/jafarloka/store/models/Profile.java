@@ -32,7 +32,7 @@ public class Profile {
     @Column(nullable = false, name = "loyalty_points")
     private int loyaltyPoints;
     // The @MapsId tell the framework to use the foreign and primary as the join column key.
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
     @MapsId
     @ToString.Exclude
