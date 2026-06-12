@@ -26,7 +26,7 @@ public class User {
     private String email;
     @Column(nullable = false, name = "password")
     private String password;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST) // this is the field in address-entity
+    @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}) // this is the field in address-entity
     @Builder.Default
     // private final List<Address> addresses = new ArrayList<>();
     private List<Address> addresses = new ArrayList<>();
