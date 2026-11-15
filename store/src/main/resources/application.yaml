@@ -13,7 +13,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MariaDBDialect
-
-mail:
-  host: JLoka
-  port: 3000
